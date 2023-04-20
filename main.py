@@ -14,7 +14,18 @@ while firstValue != "quit":
     if firstValue == "quit":
         break
     signValue = input("Now input the process you want to execute. You can select +, -, *, or / : ")
+    while True:
+        if signValue == '+' or '-' or '*' or '/': 
+            break
+        else:
+            print("Please input one of the four methods listed.")
     secondValue = input("Finally, input the last value: ")
+    while True:
+        try: 
+            secondValue = int(secondValue)
+            break
+        except ValueError:
+            print("Please input a number.")
 
     firstValue = int(firstValue)
     secondValue = int(secondValue)
